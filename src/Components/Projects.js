@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <>
-    {/* <img src={bookbg} alt="Background_image" className="absolute object-cover w-screen h-screen -z-10"/> */}
+    <img src={bookbg} alt="Background_image" className="absolute object-cover min-h-screen min-w-full -z-10 bgpic"/>
       <div className="flex justify-center sm:text-2xl text-lg rob m-2">
       <Typewriter
         onInit={(typewriter) => {
