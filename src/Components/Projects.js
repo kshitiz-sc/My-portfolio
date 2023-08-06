@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <>
-    <img src={bookbg} alt="Background_image" className="absolute object-cover w-full h-screen -z-10"/>
+    {/* <img src={bookbg} alt="Background_image" className="absolute object-cover w-screen h-screen -z-10"/> */}
       <div className="flex justify-center sm:text-2xl text-lg rob m-2">
       <Typewriter
         onInit={(typewriter) => {
@@ -42,12 +42,12 @@ const Projects = () => {
         {projectsdata &&
           projectsdata.map((currentproject, index) => {
             return(
-              <article className="border-solid border-black border-2 p-3 rounded-lg lg:m-3 m-2 shadow-slate-400 shadow-lg ">
-              <h1 className="text-3xl m-2">
+              <article className="border-solid border-black border-2 p-3 rounded-lg lg:m-3 m-2 shadow-neutral-950 shadow-lg">
+              <h1 className="sm:text-3xl m-2 text-lg">
                 <strong>Project title:-{currentproject.projectname}</strong>
               </h1>
-              <h2 className="m-1"><strong>Project link:-</strong> <a className="hover:underline hover:text-cyan-600" href={currentproject.projectlink} target="_blank" rel="noreferrer">{currentproject.projectlink}</a></h2>
-              <p className="m-1 cursive lg:text-lg"><strong>Description:-</strong>{currentproject.desc}</p>
+              <h2 className="m-1"><strong>Project link:-</strong> <a className="hover:underline hover:text-cyan-600 underline" href={currentproject.projectlink} target="_blank" rel="noreferrer">{currentproject.projectlink}</a></h2>
+              <p className="m-1 cursive lg:text-lg sm:text-base"><strong>Description:-</strong>{currentproject.desc}</p>
             </article>
             )
           })}

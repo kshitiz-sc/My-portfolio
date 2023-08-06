@@ -12,6 +12,17 @@
 .cursive{
   font-family: 'Edu SA Beginner', cursive;
 }
+.icons{
+  height: 40px !important;
+  width: 40px !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .icons{
+    height: 25px !important;
+    width: 25px !important;
+  }
+}
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
