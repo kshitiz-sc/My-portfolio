@@ -1,13 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./Components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Projects from "./Components/Projects";
 
 function App() {
   return (
-    <div className="flex items-center justify-center bg-red-300 h-28">
-      <h1 className="mx-2 text-2xl cursive">This is heading</h1>
-      <h1 className="mx-2 text-lg rob">This is heading</h1>
-      <h1 className="mx-2 text-lg hand-jet">This is heading</h1>
-    </div>
+    <BrowserRouter>
+    <>
+      <Navbar/>
+      <Routes>
+        <Route Component={Home} path="/" exact/>
+        <Route Component={Projects} path="/projects"/>
+      </Routes>
+    </>
+    </BrowserRouter>
   );
 }
 
