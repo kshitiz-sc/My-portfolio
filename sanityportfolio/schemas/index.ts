@@ -1,0 +1,24 @@
+export const schemaTypes = [
+    {
+        name:"project",
+        title:"Project",
+        type:"document",
+        fields:[
+            {
+                name:"projectname",
+                title:"Project-Name",
+                type:"string"
+            },
+            {
+                name:"projectlink",
+                title:"Project-Link",
+                type:"url"
+            },
+            {
+                name:"desc",
+                title:"Description",
+                type:"string"
+            }
+        ]
+    }
+]
