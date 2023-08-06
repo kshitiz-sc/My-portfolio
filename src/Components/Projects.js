@@ -20,7 +20,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="bg-blue-200 h-screen">
+    <div className="bg-blue-200 min-h-screen">
     {/* <img src={bookbg} alt="Background_image" className="absolute object-cover h-full min-w-full -z-10"/> */}
       <div className="flex justify-center sm:text-2xl text-lg rob mb-2">
       <Typewriter
