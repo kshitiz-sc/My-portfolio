@@ -7,7 +7,7 @@ export const schemaTypes = [
             {
                 name:"projectname",
                 title:"Project-Name",
-                type:"string"
+                type:"string",
             },
             {
                 name:"projectlink",
