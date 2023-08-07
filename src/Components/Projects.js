@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import sanityClient from "../client";
 import Typewriter from 'typewriter-effect';
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const [projectsdata, setprojectsdata] = useState(null);
@@ -41,13 +42,13 @@ const Projects = () => {
         {projectsdata &&
           projectsdata.map((currentproject, index) => {
             return(
-              <article className="border-solid border-black border-2 p-3 rounded-lg lg:m-3 m-2 shadow-neutral-950 shadow-lg">
+              <motion.article className="border-solid border-black border-2 p-3 rounded-lg lg:m-3 m-2 shadow-neutral-950 shadow-lg" animate={{x:0}} initial={{x:'-100vw'}} transition={{type:"spring", stiffness:200}}>
               <h1 className="sm:text-3xl m-2 text-lg">
                 <strong>Project title:-{currentproject.projectname}</strong>
               </h1>
-              <h2 className="m-1"><strong>Project link:-</strong> <a className="hover:underline hover:text-cyan-600 underline" href={currentproject.projectlink} target="_blank" rel="noreferrer">{currentproject.projectlink}</a></h2>
+              <motion.h2 className="m-1" whileHover={{scale:1.08, originX: 0}}><strong>Project link:-</strong> <motion.a className="hover:underline hover:text-cyan-600 underline" href={currentproject.projectlink} target="_blank" rel="noreferrer" >{currentproject.projectlink}</motion.a></motion.h2>
               <p className="m-1 cursive lg:text-lg sm:text-base"><strong>Description:-</strong>{currentproject.desc}</p>
-            </article>
+            </motion.article>
             )
           })}
       </div>

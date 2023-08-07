@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
+
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-start sm:h-28 h-20 bg-gray-700">
@@ -22,8 +24,9 @@ const Navbar = () => {
       >
         Projects
       </NavLink>
-      <div className="flex items-center lg:ml-5">
+      <motion.div className="flex items-center lg:ml-5" initial={{y:-500}} animate={{x: 0, y:0}}>
         <h1 className="text-slate-50">Links</h1>
+        <motion.span whileHover={{scale:1.11}}>
         <SocialIcon
           url="https://github.com/kshitiz-sc"
           bgColor="white"
@@ -32,6 +35,8 @@ const Navbar = () => {
           rel="noreferrer"
           className="mx-2 icons"
         />
+        </motion.span>
+        <motion.span whileHover={{scale:1.11}}>
         <SocialIcon
           url="https://www.linkedin.com/in/kshitiz-singh-chauhan-696242212/"
           target="_blank"
@@ -39,7 +44,8 @@ const Navbar = () => {
           fgColor="white"
           className="icons"
         />
-      </div>
+        </motion.span>
+      </motion.div>
     </nav>
   );
 };
